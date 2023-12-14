@@ -1,0 +1,55 @@
+.NavBarPc {
+  padding: 0 1.5rem;
+  display: block;
+  justify-content: left;
+  align-items: center;
+  color: var(--razer-font-grey);
+  font-size: var(--razer-font-);
+  background-color: var(--razer-darkgrey);
+  position: relative;
+}
+
+.dropdown-menu-toggler{
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  height: 50px;
+}
+
+.NavBarPc .toggle-text {
+  margin-right: 0.25rem;
+}
+
+.NavBarPc .toggle-arrow {
+  margin-left: 0.25rem;
+}
+
+.link-container {
+  display: none;
+  background-color: var(--razer-darkgrey);
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  width: 100vw;
+  padding: 0 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+
+.NavBarPc ul {
+  list-style-type: none;
+  color: var(--razer-font-white);
+}
+
+.link-container ul li {
+  border-top: 1px solid var(--razer-font-grey);
+  font-size: var(--razer-font-tiny);
+  margin: 0;
+  padding: 0.5rem 0;
+}
+
+.NavBarPc li > a {
+  color: var(--razer-font-white);
+  cursor: pointer;
+}

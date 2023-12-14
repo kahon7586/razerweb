@@ -1,0 +1,85 @@
+.footer{
+  background-color: #111;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 0.75rem;
+  color: #999;
+}
+
+.upper-footer   {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 25px 20px;
+}
+
+.footer-label {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footer-label > .label-heading {
+  color: #eee;
+  cursor: default;
+}
+
+.footer-label > .label-link:hover {
+  color: #eee;
+  text-decoration: underline;
+}
+
+.social-media {
+  gap: 10px;
+  display: flex;
+  justify-content: left;
+}
+
+.socialMedia-icon {
+  height: 1.6rem;
+  width: 1.6rem;
+  fill: #999;
+}
+
+.socialMedia-icon:hover {
+  fill: #eee;
+  cursor: pointer;
+}
+
+.footer-slogan{
+  width: 20vw;
+  color: #44d62c;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 1rem;
+  text-align: end;
+}
+
+.hr {
+  width: calc(100% - 40px);
+  border-bottom: 1px solid #555;
+  margin: 0 auto;
+}
+
+.lower-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 20px;
+}
+
+.lower-footer  p{
+  display: inline-flex;
+}
+
+.lower-footer p span {
+  padding: 0 8px;
+  border-left: 1px solid #555;
+}
+.lower-footer p span:first-child {
+  border-left: none;
+  padding-left: 0;
+}
+.lower-footer p span:last-child {
+  padding-right: 0;
+}

@@ -1,0 +1,48 @@
+.Card {
+  width: auto;
+  height: auto;
+}
+
+.card-upper {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.card-upper > .image {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  
+}
+
+.card-lower{
+  display: block;
+  background-color: var(--razer-liteblack);
+  padding: 0.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--razer-green);
+}
+
+.card-lower .cardName {
+  color: var(--razer-font-white);
+  margin-bottom: 1rem;
+  font-size: 20px; 
+}
+
+.card-lower > .cardInfo {
+  color: var(--razer-font-grey);
+  height: 3.5rem;
+ 
+}
+
+.card-lower > .moreURL {
+  color: var(--razer-green);
+  padding-bottom: 0.5rem;
+  text-align: center;
+  font-size: var(--razer-font-small);
+}
+
+

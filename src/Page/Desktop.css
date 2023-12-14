@@ -1,0 +1,87 @@
+.desktop-body-container {
+  container-type: inline-size;
+  max-width: 100%;
+}
+
+.desktop-body {
+  background: var(--razer-grey);
+  display: grid;
+  grid-template-columns: auto ;
+  gap: 1rem;
+  padding: 25px 18px;
+  width: 100%;
+}
+
+@container ( width > 575px ) {
+  .desktop-body {
+    grid-template-columns: auto auto ;
+  }
+}
+@container ( width > 1200px ) {
+  .desktop-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 15vw;
+  }
+}
+
+.Slogan {
+  background-color: var(--razer-liteblack);
+  display: block;
+  text-align: center;
+  padding: 1.5rem 5%;
+}
+
+.Slogan .slogan-title {
+  color: var(--razer-green);
+  font-size: 2.5rem;
+  font-weight: 300;
+}
+
+.Slogan .slogan-content {
+  color: var(--razer-font-grey);
+  font-size: 1.1rem;
+  font-weight: 300;
+}
+
+.Hero {
+  display: block;
+  text-align: center;
+  position: relative;
+  height: 70vh;
+  padding: 3rem 5rem;
+  font-weight: 300;
+}
+
+.Hero > .hero-img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 70vh;
+  object-fit: cover;
+  object-position: bottom center;
+  z-index: -5;
+}
+
+.Hero > .hero-title, .hero-subtitle, .hero-moreURL {
+  text-shadow: 1px 1px 2px black;
+}
+
+.Hero > .hero-title {
+  color: var(--razer-font-white);
+  font-size: 2rem;
+  padding: 0.25rem;
+}
+
+.Hero > .hero-subtitle{
+  color: var(--razer-font-grey);
+  font-size: 1.2rem;
+}
+
+.Hero > .hero-moreURL {
+  color: var(--razer-green);
+  margin: 1.5rem 0;
+  cursor: pointer;
+}

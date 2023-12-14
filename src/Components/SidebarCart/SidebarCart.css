@@ -1,0 +1,69 @@
+.sidebar-cart {
+  position: absolute;
+  width: 70vw;
+  max-width: 700px;
+  height: 100%;
+  background-color: color-mix(in srgb, var(--razer-darkgrey), transparent 20%) ;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: flex;
+}
+
+.ProductPreview {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background-color: var(--razer-liteblack);
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+
+.ProductPreview > .product-image {
+  width: 30%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.ProductPreview > .previewInfo {
+  display: block;
+  color: var(--razer-font-white);
+  margin: 0 1rem ;
+  height: 100%;
+  width: 100%;
+}
+
+.previewInfo > p{
+
+  padding-bottom: 0.25rem;
+}
+
+.previewInfo > .previewInfo-name {
+  font-size: 1.5rem;
+}
+
+.previewInfo > .previewInfo-amount {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 2rem;
+  border-bottom: 1px solid var(--razer-litegrey);
+}
+
+.previewInfo > .previewInfo-total {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+  border-bottom: 1px solid var(--razer-litegrey);
+}

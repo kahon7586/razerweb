@@ -1,0 +1,98 @@
+.Product {
+  background-color: var(--razer-liteblack);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 3rem ;
+}
+
+.product-upper {
+  width: auto;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: var(--razer-font-white);
+  font-size: 1.5rem;
+}
+
+
+
+.product-upper > .product-img {
+  width: auto;
+  height: auto;
+  max-width: 400px;
+  max-height: 400px;
+  margin: 0 3rem;
+}
+
+.product-upper > .button-container {
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: left;
+}
+
+.product-upper .type > .type-text {
+  padding-bottom: 0.5rem;
+}
+
+.product-upper .option {
+  margin-right: 1rem;
+}
+
+.product-upper .option > .option-checkbox {
+  display: none;
+}
+
+.product-upper .option > .option-text {
+  border: 1px solid var(--razer-green);
+  padding: 0.1rem 2rem;  
+}
+
+
+.product-upper .option > .option-checkbox:checked + .option-text {
+  color: var(--razer-liteblack);
+  background-color: var(--razer-green);
+  border: 3px solid var(--razer-green);
+}
+
+.AmountButton {
+  display: flex;
+  padding-top: 1rem; 
+  
+  align-items: center;
+}
+
+.AmountButton > * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  color: var(--razer-font-white);
+  height: 3rem;
+}
+
+.AmountButton > .button {
+  background-color: var(--razer-liteblack);
+  border: 1px solid var(--razer-green);
+  padding: 0.1rem 1.5rem;
+}
+
+.AmountButton  .amount {
+  width: 100px;
+  text-align: center;
+  border: 1px solid var(--razer-green);
+}
+
+.add-to-cart {
+  padding: 0.1rem 1.5rem;
+  border: 1px solid var(--razer-green);
+  background-color: var(--razer-liteblack);
+  color: var(--razer-font-white);
+  font-size: 1.5rem;
+}
+
