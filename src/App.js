@@ -3,8 +3,6 @@ import './App.css';
 import Layout from './Components/Router/Layout';
 import Router from './Components/Router/Router';
 
-///456
-///asdasd
 
 function App() {
 
