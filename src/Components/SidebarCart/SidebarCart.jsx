@@ -1,6 +1,7 @@
 import React, { useRef } from 'react'
 import './SidebarCart.css'
 import { useState, useEffect } from 'react'
+import mergeSameItem from '../../Lib/mergeSameItem'
 
 export const CartFunctionContext = React.createContext()
 
@@ -27,9 +28,6 @@ export const SidebarCart = ({children}) => {
 
   useEffect (() => {
     console.log(cartList)
-
-    
-
   }, [cartList])
 
   const closeSidebarCart = (e) => {
@@ -56,31 +54,19 @@ export const SidebarCart = ({children}) => {
     return itemsInCart
   }
 
-  const mergeSameItem = (newProduct) => {
 
-    let result = true
+  const handleAddToCart = (newProduct) => {
 
-    cartList.some(item => {
-
-      if(item.id !== newProduct.id) return false
-
-      const typesOfItem = Object.keys(item)
-      
-      typesOfItem.every(type => {
-        if(newProduct.typeOptionPair?.[type]) { result = false }
-        if(newProduct.typeOptionPair[type] !== item.typeOptionPair[type]) {result = false}
-      })
-    })
-
-    return result
-  }
-
-  const handleAddToCart = (item) => {
-    if(mergeSameItem()){
-      
+    const isCartListEmpty = !Boolean(cartList.length)
+    console.log('isCartListEmpty:' + isCartListEmpty )
+    if(isCartListEmpty){
+      setCartList([newProduct])
       return
     }
-    setCartList([...cartList, item])
+
+    const newProductList = mergeSameItem(cartList, newProduct)
+    setCartList(newProductList)
+    
   }
 
   const cartFunctions = {handleCartToggle, handleAddToCart}

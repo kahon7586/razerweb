@@ -70,7 +70,7 @@ const Product = () => {
     typeOptionPair: turnHashParamsIntoObj(location)
   }
 
-  console.log(currentProduct)
+
 
   const TypesAndOption = () => {
     
@@ -94,7 +94,6 @@ const Product = () => {
 
         const handleOptionClicked = () => {
           currentProduct.typeOptionPair[type] = option;
-          console.log(currentProduct)
           setHistoryHashParams(currentProduct.typeOptionPair, location)
         }
 
@@ -134,7 +133,6 @@ const Product = () => {
   } 
 
   const handleAddToCart = () => {
-
     AddToCart(currentProduct)
   }
 
@@ -152,4 +150,4 @@ const Product = () => {
   )
 }
 
-export default Product
+export default React.memo(Product)
