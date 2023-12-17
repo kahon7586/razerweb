@@ -44,6 +44,14 @@ const NavBar = () => {
 
   return (
     <>
+    
+    </>
+  )
+}
+
+export default NavBar
+
+{/* <>
     <div className="navbar-slot"></div>
     <nav className='navbar'>
       <ul className='navbar-ul'>
@@ -74,46 +82,4 @@ const NavBar = () => {
         </li>
       </ul>
     </nav>
-    </>
-  )
-}
-
-export default NavBar
-
-
-// const NavBar = () => {
-
-//   const intialPage = "Home"
-//   const [currentPage, setCurrentPage] = useState(intialPage)
-
-//   return (
-//     <nav className='navbar'>
-//       <ul>
-//         <li className="mobile">
-//           <NavbarMenu>
-//           </NavbarMenu>
-//         </li>
-//         <li className='navbar-icon-razer'> 
-//           <NavLink to='/'><Logo className='navbar-icon-razer' alt="icon-razer" onClick={() =>setCurrentPage(intialPage)}/></NavLink>
-//         </li>
-//         <li className='window navbar-icon-search'>
-//           <Search className='navbar-icon-search icon'  alt="icon-search"/>
-//         </li>
-//         <li className='navbar-icon-cart'>
-//           <NavLink to='/Cart'><Cart className='navbar-icon-cart icon' alt="icon-cart" onClick={() =>setCurrentPage("Cart")}/></NavLink>
-//         </li>
-
-//       {labelArray.map((la, i) => (
-//         <li key={`navbar-label-${la}`} className='nav-link bar'>
-//           <p className='label hover' key={la} onClick={() =>setCurrentPage(la)}>
-//           <NavLink to={`/${la}`} >{(currentPage === la ? <span className='clicked'>{URLTEXT[la]}</span> : URLTEXT[la])}</NavLink>
-//           </p>
-//         </li>
-//       ))}
-        
-//       </ul>
-//     </nav>
-//   )
-// }
-
-// export default NavBar
+    </> */}

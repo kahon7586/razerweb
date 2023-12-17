@@ -76,8 +76,6 @@ export const SidebarCart = ({children}) => {
         <div ref={ref_SidebarCart} className={`sidebar-cart ${(cartToggle ? 'show' : 'hide')}`}>
           {displayCartList()}
         </div>
-        <button onClick={handleAddToCart} height="500"> add to cart</button>
-        <button onClick={handleCartToggle}>cart</button>
         {children}
     </CartFunctionContext.Provider>
   )
