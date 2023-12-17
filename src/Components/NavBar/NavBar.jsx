@@ -27,7 +27,6 @@ const NavBar = () => {
   
   const {
     handleCartToggle,
-    handleAddToCart
   } = useContext(CartFunctionContext)
 
 
@@ -40,46 +39,44 @@ const NavBar = () => {
     setDropdownMenuToggle((prev) => !prev )
   }
 
+  const isToggled = (dropdownMenuToggle ? "toggled" : null)
 
+  const textLinks = 
+  <ul className={`link-ul ${isToggled}`}>
+    {labelArray.map((la, i) => {
+      
+      const isCurrentPage = (currentPage === la ? <span className='clicked'>{URLTEXT[la]}</span> : URLTEXT[la])
+      
+      return(
+      <li key={`navbar-label-${la}`} className='nav-link'>
+          <NavLink to={`/${la}`} className='label hover' key={la} onClick={() =>handleNavlinkClicked(la) }>
+          {isCurrentPage}</NavLink>
+      </li>)
+    })}
+  </ul>
+
+  const iconLinks = {
+    hamburger: <NavbarMenu className="hamburger-button" onClick={() => handleHamburgerClicked()} />,
+    razer: <Logo className='navbar-icon-razer' alt="icon-razer" onClick={() =>setCurrentPage(intialPage)}/>,
+    search: <Search className='navbar-icon-search icon'  alt="icon-search"/>,
+    cart: <Cart className='navbar-icon-cart icon' alt="icon-cart" onClick={() => handleCartToggle()}/>
+  }
 
   return (
     <>
-    
+    <div className="navbar-slot"></div>
+    <nav className='navbar'>
+      <ul className='navbar-ul'>
+        <li className="mobile">{iconLinks.hamburger}</li>
+        <li className="links-container">{textLinks}</li>  
+        <li className='navbar-icon-razer'><NavLink to='/'>{iconLinks.razer}</NavLink></li>
+        <li className='navbar-icon-search window'>{iconLinks.search}</li>
+        <li className='navbar-icon-cart' >{iconLinks.cart}</li>
+      </ul>
+    </nav>
     </>
   )
 }
 
 export default NavBar
 
-{/* <>
-    <div className="navbar-slot"></div>
-    <nav className='navbar'>
-      <ul className='navbar-ul'>
-        <li className="mobile">
-          <NavbarMenu className="hamburger-button" onClick={() => handleHamburgerClicked()} />
-        </li>
-        <li className="links-container">
-          <div>
-            <ul className={`link-ul ${(dropdownMenuToggle ? "toggled" : null)}`}>
-              {labelArray.map((la, i) => (
-                <li key={`navbar-label-${la}`} className='nav-link'>
-                <p className='label hover' key={la} onClick={() =>handleNavlinkClicked(la) }>
-                <NavLink to={`/${la}`} >{(currentPage === la ? <span className='clicked'>{URLTEXT[la]}</span> : URLTEXT[la])}</NavLink>
-                </p>
-              </li>
-            ))}
-            </ul>
-          </div>
-        </li>  
-        <li className='navbar-icon-razer'> 
-          <NavLink to='/'><Logo className='navbar-icon-razer' alt="icon-razer" onClick={() =>setCurrentPage(intialPage)}/></NavLink>
-        </li>
-        <li className='navbar-icon-search window'>
-          <Search className='navbar-icon-search icon'  alt="icon-search"/>
-        </li>
-        <li className='navbar-icon-cart' onClick={() => handleCartToggle()}>
-            <Cart className='navbar-icon-cart icon' alt="icon-cart" />
-        </li>
-      </ul>
-    </nav>
-    </> */}
